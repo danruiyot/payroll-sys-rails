@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.6.5   
+* Bulma css
+* postgress sql
 
-Things you may want to cover:
+## run the following
 
-* Ruby version
+    bundle install
+    rails db:migrate
+    rails serve
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+and we are good
