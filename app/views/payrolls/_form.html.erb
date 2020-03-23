@@ -1,0 +1,42 @@
+<%= form_with(model: payroll, local: true) do |form| %>
+  <% if payroll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payroll.errors.count, "error") %> prohibited this payroll from being saved:</h2>
+
+      <ul>
+        <% payroll.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employee_name %>
+    <%= form.text_field :employee_name , :class=>'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pay_perhour %>
+    <%= form.number_field :pay_perhour , :class=>'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours_worked %>
+    <%= form.number_field :hours_worked , :class=>'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :overtime_perhour %>
+    <%= form.number_field :overtime_perhour , :class=>'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :over_time_hours %>
+    <%= form.number_field :over_time_hours , :class=>'input' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :class=>'button is-primary' %>
+  </div>
+<% end %>

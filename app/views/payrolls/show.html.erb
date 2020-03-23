@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @payroll.employee_name %>
+</p>
+
+<p>
+  <strong>Pay perhour:</strong>
+  <%= @payroll.pay_perhour %>
+</p>
+
+<p>
+  <strong>Hours worked:</strong>
+  <%= @payroll.hours_worked %>
+</p>
+
+<p>
+  <strong>Overtime perhour:</strong>
+  <%= @payroll.overtime_perhour %>
+</p>
+
+<p>
+  <strong>Over time hours:</strong>
+  <%= @payroll.over_time_hours %>
+</p>
+
+<%= link_to 'Edit', edit_payroll_path(@payroll) %> |
+<%= link_to 'Back', payrolls_path %>

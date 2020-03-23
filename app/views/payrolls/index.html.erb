@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Payrolls</h1>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Employee name</th>
+      <th>Pay perhour</th>
+      <th>Hours worked</th>
+      <th>Overtime perhour</th>
+      <th>Over time hours</th>
+      <th>Gross pay</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payrolls.each do |payroll| %>
+      <tr>
+        <td><%= payroll.employee_name %></td>
+        <td><%= payroll.pay_perhour %></td>
+        <td><%= payroll.hours_worked %></td>
+        <td><%= payroll.overtime_perhour %></td>
+        <td><%= payroll.over_time_hours %></td>
+        <td><%= payroll.over_time_hours * payroll.overtime_perhour + payroll.pay_perhour * payroll.hours_worked  %></td>
+
+        <td><%= link_to 'Show', payroll %></td>
+        <td><%= link_to 'Edit', edit_payroll_path(payroll) %></td>
+        <td><%= link_to 'Destroy', payroll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payroll', new_payroll_path %>
