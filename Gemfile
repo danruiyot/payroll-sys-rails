@@ -12,7 +12,7 @@ gem 'pg'
 
 gem 'rails_12factor'
 
-gem 'sqlite3', '~> 1.3', '>= 1.3.6'
+# gem 'sqlite3', '~> 1.3', '>= 1.3.6'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
