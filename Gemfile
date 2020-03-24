@@ -8,9 +8,15 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 gem 'devise'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+group :development, :test do 
+  gem 'sqlite3'
+end
 
-gem 'rails_12factor'
+group :production, :test do 
+gem 'pg'
+end
+
+# gem 'rails_12factor'
 
 # gem 'sqlite3', '~> 1.3', '>= 1.3.6'
 
