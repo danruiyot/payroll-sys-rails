@@ -10,13 +10,10 @@ gem 'devise'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
-# group :development, :test do
-#   gem 'sqlite3'
-# end
+gem 'rails_12factor'
 
-# group :production do
-#   gem 'pg'
-# end
+gem 'sqlite3', '~> 1.3', '>= 1.3.6'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
